@@ -14,3 +14,6 @@ best way to predict that individual Mouse's weight?
 
 R² =  [ VAR(mean) - VAR( best_fit_line) ] / VAR( mean)
 --
+
+
+
