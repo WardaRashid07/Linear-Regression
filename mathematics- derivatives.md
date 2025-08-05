@@ -23,7 +23,8 @@ Where:
 - **β₁**: Slope (equivalent to m)
 
 ---
-![Screenshot](./4 - prediction.png)
+![Prediction Screenshot](4%20-%20prediction.png)
+
 
 
 In multiple linear regression, the hypothesis function becomes:
@@ -75,8 +76,8 @@ Where:
 3. Average all squared differences to get MSE — this is your **cost**.
 
 ---
+<img src="5%20-%20R%20square%20-%20residual%20definition.png" width="300">
 
-![Screenshot](./5 - R square - residual definition.png)
 
 ---
 
