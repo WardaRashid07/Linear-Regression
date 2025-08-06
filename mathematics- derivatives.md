@@ -23,7 +23,7 @@ Where:
 - **β₁**: Slope (equivalent to m)
 
 ---
-![Prediction Screenshot](4%20-%20prediction.png)
+<img src ="4_prediction.png" width = "300"> 
 
 
 
@@ -32,14 +32,6 @@ In multiple linear regression, the hypothesis function becomes:
 **ŷ = β₀ + β₁x₁ + β₂x₂ + ⋯ + βₙxₙ**
 
 # 2. Cost Function (Loss Function)
-
-To measure how good the line is, we use **Mean Squared Error (MSE)**:
-
-**J(β₀, β₁) = (1/n) * Σᵢ=1ⁿ (yᵢ - ŷᵢ)² = (1/n) * Σᵢ=1ⁿ (yᵢ - (β₀ + β₁xᵢ))²**
-
-Our goal is to minimize this error.
-
----
 
 ## In Simple Terms
 
@@ -54,6 +46,9 @@ The goal of linear regression is to find the **line (model)** that minimizes thi
 
 **Mean Squared Error (MSE):**
 
+
+To measure how good the line is, we use **Mean Squared Error (MSE)**:
+
 **MSE = (1/n) * Σᵢ=1ⁿ (yᵢ − ŷᵢ)²**
 
 Where:
@@ -62,6 +57,24 @@ Where:
 - **ŷᵢ** = Predicted value from the line ŷ = β₀ + β₁x  
 - **n** = Number of data points
 
+
+     $$J(β₀, β₁) = (1/n) * Σᵢ=1ⁿ (yᵢ - ŷᵢ)² = (1/n) * Σᵢ=1ⁿ (yᵢ - (β₀ + β₁xᵢ))²$$
+
+**Notation: `J(β₀, β₁)`**
+
+- **`J`**: A conventional symbol commonly used to represent a cost or loss function.
+- **`β₀`, `β₁`**: Model parameters (intercept and slope). These are inputs to the cost function, and the computed cost depends on their values.
+  
+
+**$$(1/n) * Σᵢ=1ⁿ (yᵢ - ŷᵢ)²$$**  this represents that the actual value of y minus the predicted value of y
+,square it , do it for all values of acutal and predicted y, and then add them up. Now divide it by total 
+number of y values which is labeled as n .
+
+
+if we replace **ŷ** with **β₀ + β₁x** it becomes **$$(1/n) * Σᵢ=1ⁿ (yᵢ - (β₀ + β₁xᵢ))²$$**
+
+This is  our cost function and our goal is to minimize this error.
+
 ---
 
 ## How It Works
@@ -69,11 +82,12 @@ Where:
 1. For each point, calculate the difference between actual and predicted value:  
    **(yᵢ − ŷᵢ)**
 
-2. Square that difference to:
+2. Square that answer to:
    - Remove negative signs  
    - Penalize large errors more heavily
 
-3. Average all squared differences to get MSE — this is your **cost**.
+3. then add them up and divide the answer with total 
+number of y values which is labeled as n  to get MSE — this is your **cost**.
 
 ---
 <img src="5%20-%20R%20square%20-%20residual%20definition.png" width="300">
