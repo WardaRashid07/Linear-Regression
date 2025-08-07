@@ -92,3 +92,16 @@ This line minimizes the squared error between predicted and actual values.
 | 2️⃣  | **Loss Function** – Use MSE to evaluate error |
 | 3️⃣  | **Optimization** – Use Gradient Descent or Closed-form to minimize loss |
 | 4️⃣  | **Output** – Find β₀, β₁ → Best fit line |
+
+
+
+
+
+**These notes are inspired by StatQuest!**  
+A big shoutout to **Josh Starmer** and the [StatQuest](https://www.youtube.com/user/joshstarmer) channel for making complex statistical and machine learning concepts so easy to understand. These notes are based on their amazing explanation in the video below:
+
+**StatQuest Video**: [statquest with josh starmer linear regression]
+
+
+If you want to learn with clarity, humor, and awesome sound effects — **StatQuest** is the place to go!
+
