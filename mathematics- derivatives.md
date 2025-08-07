@@ -121,7 +121,11 @@ Minimize the cost function (usually MSE) by adjusting:
 
    - ∂J/∂β₀ = ∂Σ(yᵢ − ŷᵢ)² / ∂β₀
    - ∂J/∂β₁ = ∂Σ(yᵢ − ŷᵢ)² / ∂β₀
-     
+
+<img src="./6%20-%20Gradient.1.jpeg" alt="Gradient 1" width="300"/>
+<img src="./7%20-%20Gradient.2.jpeg" alt="Gradient 2" width="300"/>
+
+
 
 3. **Update Weights**  
    Adjust the parameters using the gradients:
