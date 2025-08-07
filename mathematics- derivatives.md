@@ -26,7 +26,6 @@ Where:
 <img src ="4_prediction.png" width = "300"> 
 
 
-
 In multiple linear regression, the hypothesis function becomes:
 
 **ŷ = β₀ + β₁x₁ + β₂x₂ + ⋯ + βₙxₙ**
@@ -58,7 +57,7 @@ Where:
 - **n** = Number of data points
 
 
-     $$J(β₀, β₁) = (1/n) * Σᵢ=1ⁿ (yᵢ - ŷᵢ)² = (1/n) * Σᵢ=1ⁿ (yᵢ - (β₀ + β₁xᵢ))²$$
+     $$J(β₀, β₁) =  &nbsp;&nbsp;&nbsp;(1/n) * Σᵢ=1ⁿ (yᵢ - ŷᵢ)² &nbsp;&nbsp;&nbsp;= (1/n) * Σᵢ=1ⁿ (yᵢ - (β₀ + β₁xᵢ))²$$
 
 **Notation: `J(β₀, β₁)`**
 
@@ -92,6 +91,8 @@ number of y values which is labeled as n  to get MSE — this is your **cost**.
 ---
 <img src="5%20-%20R%20square%20-%20residual%20definition.png" width="300">
 
+The red point represents the acutal data point. The dotted line is connected to the horizontal line at 
+some point, this point is called aas the predicted value.
 
 ---
 
@@ -106,5 +107,33 @@ number of y values which is labeled as n  to get MSE — this is your **cost**.
 
 Minimize the cost function (usually MSE) by adjusting:
 - **β₀** = Intercept  
-- **β₁** = Slope  
+- **β₁** = Slope
+
+### 3. Optimization Method
+
+### Gradient Descent (Iterative Method)
+
+1. **Initialize Parameters**  
+   Start by assigning random initial values to `β₀` and `β₁`.
+
+2. **Compute Gradients (Partial Derivatives)**  
+   For each iteration, calculate:
+
+   - ∂J/∂β₀ = -(2/n) * Σ(yᵢ - ŷᵢ)  
+   - ∂J/∂β₁ = -(2/n) * Σ(yᵢ - ŷᵢ) * xᵢ  
+
+3. **Update Weights**  
+   Adjust the parameters using the gradients:
+
+   - `β₀ := β₀ - α * ∂J/∂β₀`  
+   - `β₁ := β₁ - α * ∂J/∂β₁`  
+
+4. **Repeat Until Convergence**  
+   Continue updating until the cost function `J(β₀, β₁)` reaches its minimum (i.e., the changes become negligible).
+
+#### 📘 Notes
+
+- `α` is the **learning rate** — it controls the step size during each update.
+- `ŷᵢ` is the predicted value: `ŷᵢ = β₀ + β₁ * xᵢ`
+
 
