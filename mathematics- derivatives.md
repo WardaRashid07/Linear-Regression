@@ -114,19 +114,29 @@ Minimize the cost function (usually MSE) by adjusting:
 ### Gradient Descent (Iterative Method)
 
 1. **Initialize Parameters**  
-   Start by assigning random initial values to `β₀` and `β₁`.
+   Start by assigning random initial values to `β₀` = 0 and `β₁` = 1.
 
 2. **Compute Gradients (Partial Derivatives)**  
    For each iteration, calculate:
 
-   - ∂J/∂β₀ = -(2/n) * Σ(yᵢ - ŷᵢ)  
-   - ∂J/∂β₁ = -(2/n) * Σ(yᵢ - ŷᵢ) * xᵢ  
+   - ∂J/∂β₀ = ∂Σ(yᵢ − ŷᵢ)² / ∂β₀
+   - ∂J/∂β₁ = ∂Σ(yᵢ − ŷᵢ)² / ∂β₀
+     
 
 3. **Update Weights**  
    Adjust the parameters using the gradients:
 
-   - `β₀ := β₀ - α * ∂J/∂β₀`  
-   - `β₁ := β₁ - α * ∂J/∂β₁`  
+   - Step size = intercept * 0.01
+     
+     0.01 is a constant value called learning rate
+     
+      new intercept = old intercept - step size
+     
+   - Step size = slope * 0.01
+     
+     0.01 is a constant value called learning rate
+     
+      new slope = old slope - step size 
 
 4. **Repeat Until Convergence**  
    Continue updating until the cost function `J(β₀, β₁)` reaches its minimum (i.e., the changes become negligible).
